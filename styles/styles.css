@@ -1,0 +1,39 @@
+.body {
+    width: 100vw;
+    height: 100vh; 
+    background-color: #FAFAFB;
+    text-align: center;
+}
+
+.caixaUpload{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFFFFF;
+    width: 350px;
+    height: 400px;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.topUpload p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: #4F4F4F
+}
+
+.topUpload p.subtitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: #828282;
+}
+
+.upload{
+    width: 300px;
+    height: 200px;
+    background: #F6F8FB;
+
+    border: 1px dashed #97BEF4;
+    border-radius: 12px;
+}

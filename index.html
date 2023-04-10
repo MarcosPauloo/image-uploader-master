@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
   </head>
   <body style="margin: 0; padding: 0;">
     <div class="body">
@@ -15,14 +17,43 @@
           <p>Upload your image</p>
           <p class="subtitle">File should be Jpeg, Png,...</p>
         </div>
-        <div class="upload">  
-          <form enctype="multipart/form-data" class="uploudImage">
-            <img src="image.svg" alt="Imagem Procura">
-            <input type="button" value="Upload Image" onclick="uploadImage()">
-            <input type="file" name="fileUpload" id="idFileUpload">
-          </form>
+        <div class="body-upload"> 
+          <label class="picture" tabindex="0" for="inputPicture" >
+            <div class="divLabel" draggable="true">
+              <img src="image.svg" alt="Imagem Procura" class="imagemLabel">
+              <!--<input type="file" accept="image/*" class="picture_input"/>-->
+              <p class="or">Drag & Drop your image here</p>
+            </div>
+          </label>
+          <p class="or2">Or</p>
+          <label for="inputPicture" class="labelChoose">Choose a file</label>
+          <input type="file" accept="image/*" class="picture_input" id="inputPicture" onchange="uploadImage()"/>
         </div>
       </div>
+      <div class="loading">
+        <p class="textLoading">Uploading...</p>
+        <div class="barra">
+          <div class="barra_carregando"></div>
+        </div>
+      </div>
+      <div class="sucessfully">
+        <div class="topSucess">
+          <i class="fa-sharp fa-solid fa-circle-check" style="color: #219653; font-size: 35px; margin-top: 20px;" class="icone"></i> 
+          <p class="textSucess">Uploaded Successfully!</p>
+        </div>
+        <div class="sucessBody">
+          <div class="imageLoad">
+            <img src="img/lampada.jpg" alt="Imagem Procura" class="imagemCarregada">
+          </div>
+          <div class="caminhoImage" onclick="copyText()">
+            <label class="caminhoLabel">texto</label>
+            <label class="copy">Copy Link</label>
+          </div>
+        </div>
+      </div>
+      <p class="rodapeClass">created by <strong>@marcospauloos</strong> - devChallenges.io</p>
     </div>
   </body>
+  <script src="https://kit.fontawesome.com/af3763b683.js" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
 </html>
